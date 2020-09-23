@@ -140,7 +140,11 @@
 			</div>
 
 			<div class="container" id="banco-de-dados">
-				<table class="table table-responsive">
+        <div id="table-selector">
+			<div onclick="mostrarImoveis()">Imóveis</div>
+			<div onclick="mostrarProprietarios()">Proprietários</div>
+        </div>
+				<table id="imoveis" class="table table-responsive">
 					<thead>
 						<tr>
 							<th scope="col">Rua</th>
@@ -157,19 +161,17 @@
 						</tr>
 					</thead>
 					<tbody>
+
+					</tbody>
+				</table>
+
+				<table id="proprietarios" class="table table-responsive">
+					<thead>
 						<tr>
-							<td>Waldir Machado</td>
-							<td>Niterói</td>
-							<td>09</td>
-							<td>29490000</td>
-							<td>150000</td>
-							<td>Uma casa muita engraçada, não tinha teto, não tinha nada.</td>
-							<td>Pedro Leal</td>
-							<td>-</td>
-							<td>300000</td>
-							<td>-</td>
-							<td>450000</td>
+							<th>Nome</th>
 						</tr>
+					</thead>
+					<tbody>
 					</tbody>
 				</table>
 			</div>
@@ -189,6 +191,8 @@
 			src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
 			integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
 			crossorigin="anonymous"
-		></script>
+    ></script>
+    
+    <script src="index.js"></script>
 	</body>
 </html>
