@@ -1,0 +1,22 @@
+{
+  "name": "tonica-imobiliaria",
+  "version": "1.0.0",
+  "description": "Site da Tônica Imobiliária ",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pedrohb88/tonica-imobiliaria.git"
+  },
+  "keywords": [
+    "imobiliaria"
+  ],
+  "author": "Diana de Sales, Ian Louzada e Pedro Leal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pedrohb88/tonica-imobiliaria/issues"
+  },
+  "homepage": "https://github.com/pedrohb88/tonica-imobiliaria#readme"
+}
