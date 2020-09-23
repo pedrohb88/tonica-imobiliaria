@@ -28,11 +28,10 @@ npm install
 npm run test
 ```
 
-## Author
+## Authors
 
 👤 **Diana de Sales, Ian Louzada e Pedro Leal**
 
-* Github: [@pedrohb88](https://github.com/pedrohb88)
 
 ## Show your support
 
