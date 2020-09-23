@@ -1,0 +1,25 @@
+body{
+    background-color: #E5DDC8;
+}
+nav{
+    background-color: #004369 !important;
+}
+.btn-primary{
+    background-color: #01949A !important;
+    border: 3px solid #01949A;
+}
+
+h1{
+    color: #004369;
+}
+h2{
+    color:#DB1F48;
+}
+label{
+    font-weight: bold;
+    color: #004369;
+}
+
+.form-control{
+    border: 2px solid #01949A !important;
+}
