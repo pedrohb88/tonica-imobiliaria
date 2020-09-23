@@ -23,3 +23,15 @@ label{
 .form-control{
     border: 2px solid #01949A !important;
 }
+
+#proprietarios{
+    display: none;
+}
+
+#table-selector{
+    display: flex;
+}
+#table-selector div {
+    margin: 1em;
+    cursor: pointer;
+}
