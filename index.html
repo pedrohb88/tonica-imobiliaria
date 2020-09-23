@@ -1,0 +1,90 @@
+<html lang="pt-br">
+    <head>
+        <title>Tônica Imobiliária</title>
+        <meta charset="utf-8">
+        <meta name="title" content="Tônica Imobiliária">
+        <meta name="Description" content="Site da Tônica Imobiliária">
+        <meta name="language" content="Portuguese">
+        <meta name="author" content="Diana de Sales, Ian Louzada, Pedro Leal">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Tônica Imobiliária</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#cadastrar-imoveis">Cadastrar imóvel<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="banco-de-dados">Banco de dados</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <section id="main">
+              <h1 class="text-center">Boas-vindas à Tônica Imobiliária!</h1>
+              <div class="container" id="cadastrar-imoveis">
+                  <div class="row">
+                      <div class="col">
+                        <h2 class="text-center">Cadastrar um novo imóvel</h2>
+                        <form>
+                            <div class="form-group">
+                                <label for="f-rua">Rua</label>
+                                <input type="text" class="form-control" id="f-rua" placeholder="Rua do imóvel">
+                            </div>
+                            <div class="form-group">
+                                <label for="f-bairro">Bairro</label>
+                                <input type="text" class="form-control" id="f-bairro" placeholder="Bairro do imóvel">
+                              </div>
+                            <div class="form-group">
+                              <label for="f-numero">Número</label>
+                              <input type="number" class="form-control" id="f-numero" placeholder="Número">
+                            </div>
+                            <div class="form-group">
+                                <label for="f-cep">CEP</label>
+                                <input type="number" class="form-control" id="f-cep" placeholder="00000-000">
+                            </div>
+                            <div class="form-group">
+                                <label for="f-area">Área do imóvel</label>
+                                <input type="number" class="form-control" id="f-endereco" placeholder="Área em metros quadrados">
+                              </div>
+                            <div class="form-group">
+                                <label for="f-descricao">Descrição</label>
+                                <input type="text" class="form-control" id="f-descricao" placeholder="Breve descrição do imóvel">
+                            </div>
+                            <div class="form-group">
+                                <label for="f-a-proprietario">Proprietário anterior</label>
+                                <input type="text" class="form-control" id="f-a-proprietario" placeholder="De quem foi comprado o imóvel?">
+                            </div>
+                            <div class="form-group">
+                                <label for="f-p-compra">Preço de compra</label>
+                                <input type="number" step="any" class="form-control" id="f-p-compra" placeholder="0,00">
+                            </div>
+                            <div class="form-group">
+                                <label for="f-pm-venda">Preço mínimo para venda</label>
+                                <input type="number" step="any" class="form-control" id="f-pm-venda" placeholder="0,00">
+                            </div>
+                            
+                              
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                          </form>
+                      </div>
+                  </div>
+                
+              </div>
+
+              <div class="container" id="banco-de-dados">
+
+              </div>
+          </section>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    </body>
+</html>
