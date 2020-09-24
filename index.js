@@ -1,13 +1,27 @@
+let form = $('form');
 let imoveis = $("#imoveis");
 let proprietarios = $("#proprietarios");
 
-
 $('document').ready(function() {
+
+	form.submit(formSubmit);
     popularImoveis();
-    popularProprietarios();
+	popularProprietarios();
 });
 
+function formSubmit(e) {
+	e.preventDefault();
 
+	let data = new FormData(document.getElementById('form'));
+	let imovel = {};
+	for (var pair of data.entries()) {
+		if(pair[1] !== '')
+			imovel[pair[0]] = pair[1];
+	}
+
+	imovelDBI.insereImovel(new Imovel(imovel));
+	popularImoveis();
+}
 
 function mostrarProprietarios() {
 	imoveis.hide();
@@ -27,6 +41,7 @@ function mostrarImoveis() {
 function popularImoveis() {
 	let listaImoveis = imovelDBI.imoveis;
 	let tbody = imoveis.children("tbody");
+	tbody.html('');
 
 	listaImoveis.forEach((imovel) => {
 		let tds = "";
@@ -45,6 +60,7 @@ function popularImoveis() {
 function popularProprietarios() {
     let listaProprietarios = proprietarioDBI.proprietarios;
 	let tbody = proprietarios.children("tbody");
+	tbody.html('');
 
 	listaProprietarios.forEach((proprietario) => {
 		let tds = "";
