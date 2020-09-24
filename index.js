@@ -11,11 +11,17 @@ $('document').ready(function() {
 
 function mostrarProprietarios() {
 	imoveis.hide();
-	proprietarios.show();
+    proprietarios.show();
+    document.getElementById("im-select").style.border="3px solid white";
+    document.getElementById("pr-select").style.border="3px solid #01949A";
+
+    
 }
 function mostrarImoveis() {
 	imoveis.show();
-	proprietarios.hide();
+    proprietarios.hide();
+    document.getElementById("im-select").style.border="3px solid #01949A";
+    document.getElementById("pr-select").style.border="3px solid white";
 }
 
 function popularImoveis() {

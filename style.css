@@ -30,8 +30,34 @@ label{
 
 #table-selector{
     display: flex;
+    font-weight: bold;
+    color:#004369;
 }
 #table-selector div {
     margin: 1em;
     cursor: pointer;
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+#table-selector div:hover{
+    border: 3px solid #01949A;
+}
+#im-select{
+    border: 3px solid #01949A;
+}
+#pr-select{
+    border: 3px solid white;
+}
+
+.navbar-brand{
+    font-weight: bold;
+}
+
+.table td, .table th{
+    border-top: 1px solid white;
+ 
+}
+.table th{
+    border-bottom: 2px solid white !important;
 }

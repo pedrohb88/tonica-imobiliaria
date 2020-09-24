@@ -13,11 +13,12 @@
 			integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
 			crossorigin="anonymous"
         />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
         <link rel="stylesheet" href="./style.css"/>
 	</head>
 	<body>
 		<nav class="navbar navbar-expand-lg navbar-dark">
-			<a class="navbar-brand" href="#">Tônica Imobiliária</a>
+			<a class="navbar-brand" href="#"><i class="far fa-building mr-2"></i>Tônica Imobiliária</a>
 			<button
 				class="navbar-toggler"
 				type="button"
@@ -31,9 +32,9 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navbarNav">
 				<ul class="navbar-nav ml-auto">
-					<li class="nav-item active">
+					<li class="nav-item">
 						<a class="nav-link" href="#cadastrar-imoveis"
-							>Cadastrar imóvel<span class="sr-only">(current)</span></a
+							>Cadastrar imóvel</a
 						>
 					</li>
 					<li class="nav-item">
@@ -43,8 +44,8 @@
 			</div>
 		</nav>
 		<section id="main">
-			<h1 class="text-center">Boas-vindas à Tônica Imobiliária!</h1>
-			<div class="container" id="cadastrar-imoveis">
+			<h1 class="text-center my-5">Boas-vindas à Tônica Imobiliária!</h1>
+			<div class="container mb-5" id="cadastrar-imoveis">
 				<div class="row justify-content-center">
 					<div class="col-md-6">
 						<h2 class="text-center">Cadastrar um novo imóvel</h2>
@@ -133,16 +134,17 @@
 								/>
                             </div>
 
-							<button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+							<button type="submit" class="btn btn-primary btn-lg btn-block">Enviar</button>
 						</form>
 					</div>
 				</div>
 			</div>
 
-			<div class="container" id="banco-de-dados">
+			<div class="container pt-5 mb-5" id="banco-de-dados">
+            <h2 class="text-center my-5">Banco de dados</h2>
         <div id="table-selector">
-			<div onclick="mostrarImoveis()">Imóveis</div>
-			<div onclick="mostrarProprietarios()">Proprietários</div>
+			<div onclick="mostrarImoveis()" id="im-select">Imóveis</div>
+			<div onclick="mostrarProprietarios()" id="pr-select">Proprietários</div>
         </div>
 				<table id="imoveis" class="table table-responsive">
 					<thead>
