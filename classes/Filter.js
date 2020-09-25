@@ -4,11 +4,11 @@ class Filter {
         this.data = data;
     }
 
-    static bairro(bairro) {
-        return data.filter(imovel => imovel.bairro === bairro);
+    bairro(bairro) {
+        return this.data.filter(imovel => imovel.bairro === bairro);
     }
 
-    static vendido(vendido) {
-        return data.filter(imovel => vendido === (imovel.proprietarioNovo != undefined));
+    vendido(vendido) {
+        return this.data.filter(imovel => vendido === (imovel.proprietarioNovo != undefined));
     }
 }

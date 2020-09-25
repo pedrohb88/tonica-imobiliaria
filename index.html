@@ -49,7 +49,7 @@
 				<div class="row justify-content-center">
 					<div class="col-md-6">
 						<h2 class="text-center">Cadastrar um novo imóvel</h2>
-						<form id="form">
+						<form id="add-form">
 							<div class="form-group">
 								<label for="f-rua">Rua</label>
 								<input
@@ -154,8 +154,21 @@
         <div id="table-selector">
 			<div onclick="mostrarImoveis()" id="im-select">Imóveis</div>
 			<div onclick="mostrarProprietarios()" id="pr-select">Proprietários</div>
-        </div>
-				<table id="imoveis" class="table table-responsive">
+		</div>
+			<div id="imoveis" >
+				<div class="mt-5">
+					<form id="filter-form" class="d-flex">
+						<div class="form-group">
+							<select class="form-control" name="bairro"></select>
+						</div>
+						<div class="form-group d-flex align-items-center ml-2">
+							<input id="vendido" name="vendido" type="checkbox">
+							<label class="ml-2 mb-0" for="vendido">Vendido</label>
+						</div>
+						<button class="btn btn-primary ml-4" type="submit">Filtrar</button>
+					</form>
+				</div>
+				<table class="table table-responsive">
 					<thead>
 						<tr>
 							<th scope="col">Rua</th>
@@ -175,6 +188,7 @@
 
 					</tbody>
 				</table>
+			</div>
 
 				<table id="proprietarios" class="table table-responsive">
 					<thead>
@@ -202,8 +216,9 @@
 			src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
 			integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
 			crossorigin="anonymous"
-    ></script>
+	></script>
 	
+	<script src="classes/Filter.js"></script>
 	<script src="classes/Proprietario.js"></script>
 	<script src="classes/Imovel.js"></script>
 	<script src="classes/ImovelDBI.js"></script>
