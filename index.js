@@ -57,7 +57,6 @@ function formSubmit(e) {
 	}
 
 	let novoImovel = new Imovel(imovel);
-	console.log(novoImovel.validar());
 	imovelDBI.insereImovel(novoImovel);
 	listaImoveis = imovelDBI.imoveis;
 	popularSelect();
