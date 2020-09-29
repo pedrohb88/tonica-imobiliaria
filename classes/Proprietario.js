@@ -4,3 +4,5 @@ class Proprietario {
         this.nome = nome;
     }
 }
+
+export default Proprietario;

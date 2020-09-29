@@ -152,8 +152,8 @@
 			<div class="container pt-5 mb-5" id="banco-de-dados">
             <h2 class="text-center my-5">Banco de dados</h2>
         <div id="table-selector">
-			<div onclick="mostrarImoveis()" id="im-select">Imóveis</div>
-			<div onclick="mostrarProprietarios()" id="pr-select">Proprietários</div>
+			<div id="im-select">Imóveis</div>
+			<div id="pr-select">Proprietários</div>
 		</div>
 			<div id="imoveis" >
 				<div class="mt-5">
@@ -218,12 +218,12 @@
 			crossorigin="anonymous"
 	></script>
 	
-	<script src="classes/Filter.js"></script>
-	<script src="classes/Proprietario.js"></script>
-	<script src="classes/Imovel.js"></script>
-	<script src="classes/ImovelDBI.js"></script>
-	<script src="classes/ProprietarioDBI.js"></script>
-	<script src="dbinit.js"></script>
-	<script src="index.js"></script>
+	<script type="module" src="classes/Filter.js"></script>
+	<script type="module" src="classes/Proprietario.js"></script>
+	<script type="module" src="classes/Imovel.js"></script>
+	<script type="module" src="classes/ImovelDBI.js"></script>
+	<script type="module" src="classes/ProprietarioDBI.js"></script>
+	<script type="module" src="dbinit.js"></script>
+	<script type="module" src="index.js"></script>
 	</body>
 </html>

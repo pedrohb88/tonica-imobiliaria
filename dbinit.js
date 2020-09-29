@@ -1,3 +1,8 @@
+import ProprietarioDBI from './classes/ProprietarioDBI.js';
+import ImovelDBI from './classes/ImovelDBI.js';
+import Imovel from './classes/Imovel.js';
+import Proprietario from './classes/Proprietario.js';
+
 var proprietarioDBI = new ProprietarioDBI();
 
 proprietarioDBI.insereProprietario(new Proprietario({ id: 0, nome: 'João Souza de Melo' }));
@@ -83,3 +88,5 @@ imovelDBI.insereImovel(new Imovel({
     proprietarioAntigo: 9, proprietarioNovo: null, precoCompra: 80000,
     precoVenda: null, precoMinimoVenda: 100000
 }));
+
+export {imovelDBI, proprietarioDBI};

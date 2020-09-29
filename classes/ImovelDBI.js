@@ -1,3 +1,5 @@
+import Imovel from './Imovel.js';
+
 class ImovelDBI {
     constructor() {
         this.imoveis = [];
@@ -44,3 +46,5 @@ class ImovelDBI {
         return imoveis;
     }
 }
+
+export default ImovelDBI;

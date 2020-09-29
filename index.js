@@ -1,4 +1,6 @@
-const INF = 999999;
+import {imovelDBI, proprietarioDBI} from './dbinit.js';
+import Proprietario from './classes/Proprietario.js';
+import Imovel from './classes/Imovel.js';
 
 let form = $('#add-form');
 let filterForm = $('#filter-form');
@@ -9,14 +11,16 @@ let listaImoveis = imovelDBI.imoveis;
 
 $('document').ready(function () {
 
-	form.submit(formSubmit);
-	filterForm.submit(filterSubmit);
+	form.submit(adicionarImovel);
+	filterForm.submit(filtrarImoveis);
+	$('#im-select').click(mostrarImoveis);
+	$('#pr-select').click(mostrarProprietarios);
 	popularSelect();
 	popularImoveis();
 	popularProprietarios();
 });
 
-function filterSubmit(e) {
+function filtrarImoveis(e) {
 	e.preventDefault();
 
 	let data = new FormData(document.getElementById('filter-form'));
@@ -35,15 +39,17 @@ function filterSubmit(e) {
 	popularImoveis();
 }
 
-function formSubmit(e) {
+function adicionarImovel(e) {
 	e.preventDefault();
 
-	let data = new FormData(document.getElementById('add-form'));
+	let data = new FormData(e.target);
 	let imovel = {};
 	for (var pair of data.entries()) {
 
 		if (pair[0] === 'proprietarioAntigo') {
 			let idProprietario = proprietarioDBI.proprietarios.length;
+
+			
 
 			proprietarioDBI.insereProprietario(new Proprietario({
 				id: idProprietario,
@@ -57,11 +63,14 @@ function formSubmit(e) {
 	}
 
 	let novoImovel = new Imovel(imovel);
+	if(!novoImovel.validar())
+		return false;
 	imovelDBI.insereImovel(novoImovel);
 	listaImoveis = imovelDBI.imoveis;
 	popularSelect();
 	popularImoveis();
 	popularProprietarios();
+	return true;
 }
 
 function mostrarProprietarios() {

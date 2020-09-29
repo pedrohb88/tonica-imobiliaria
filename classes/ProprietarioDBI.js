@@ -44,3 +44,5 @@ class ProprietarioDBI {
         return proprietarios;
     }
 }
+
+export default ProprietarioDBI;

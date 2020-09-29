@@ -57,3 +57,5 @@ class Imovel {
         return true;
     }
 }
+
+export default Imovel;

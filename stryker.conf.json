@@ -1,0 +1,20 @@
+{
+  "$schema": "./node_modules/@stryker-mutator/core/schema/stryker-schema.json",
+  "mutator": "javascript",
+  "packageManager": "npm",
+  "reporters": [
+    "html",
+    "clear-text",
+    "progress"
+  ],
+  "jest": {
+    "enableFindRelatedTests": false
+  },
+  "mutate": [
+    "classes/ImovelDBI.js",
+    "classes/Imovel.js"
+  ],
+  "testRunner": "jest",
+  "transpilers": [],
+  "coverageAnalysis": "off"
+}
