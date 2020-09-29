@@ -1,3 +1,5 @@
+const INF = 999999;
+
 let form = $('#add-form');
 let filterForm = $('#filter-form');
 let imoveis = $("#imoveis");
@@ -5,12 +7,12 @@ let proprietarios = $("#proprietarios");
 
 let listaImoveis = imovelDBI.imoveis;
 
-$('document').ready(function() {
+$('document').ready(function () {
 
 	form.submit(formSubmit);
 	filterForm.submit(filterSubmit);
 	popularSelect();
-    popularImoveis();
+	popularImoveis();
 	popularProprietarios();
 });
 
@@ -23,10 +25,10 @@ function filterSubmit(e) {
 	for (var pair of data.entries()) {
 		let key = pair[0];
 		let value = pair[1];
-	
-		if(key === 'bairro' && value !== '')
+
+		if (key === 'bairro' && value !== '')
 			imoveis = new Filter(imoveis).bairro(value);
-		if(key === 'vendido' && value === 'on')
+		if (key === 'vendido' && value === 'on')
 			imoveis = new Filter(imoveis).vendido(true);
 	}
 	listaImoveis = imoveis;
@@ -40,7 +42,7 @@ function formSubmit(e) {
 	let imovel = {};
 	for (var pair of data.entries()) {
 
-		if(pair[0] === 'proprietarioAntigo'){
+		if (pair[0] === 'proprietarioAntigo') {
 			let idProprietario = proprietarioDBI.proprietarios.length;
 
 			proprietarioDBI.insereProprietario(new Proprietario({
@@ -50,11 +52,13 @@ function formSubmit(e) {
 			pair[1] = idProprietario;
 		}
 
-		if(pair[1] !== '')
+		if (pair[1] !== '')
 			imovel[pair[0]] = pair[1];
 	}
 
-	imovelDBI.insereImovel(new Imovel(imovel));
+	let novoImovel = new Imovel(imovel);
+	console.log(novoImovel.validar());
+	imovelDBI.insereImovel(novoImovel);
 	listaImoveis = imovelDBI.imoveis;
 	popularSelect();
 	popularImoveis();
@@ -63,15 +67,15 @@ function formSubmit(e) {
 
 function mostrarProprietarios() {
 	imoveis.hide();
-    proprietarios.show();
-    document.getElementById("im-select").style.border="3px solid white";
-    document.getElementById("pr-select").style.border="3px solid #01949A";  
+	proprietarios.show();
+	document.getElementById("im-select").style.border = "3px solid white";
+	document.getElementById("pr-select").style.border = "3px solid #01949A";
 }
 function mostrarImoveis() {
 	imoveis.show();
-    proprietarios.hide();
-    document.getElementById("im-select").style.border="3px solid #01949A";
-    document.getElementById("pr-select").style.border="3px solid white";
+	proprietarios.hide();
+	document.getElementById("im-select").style.border = "3px solid #01949A";
+	document.getElementById("pr-select").style.border = "3px solid white";
 }
 
 function popularSelect() {
@@ -84,9 +88,9 @@ function popularSelect() {
 	let bairros = [];
 
 	imovelDBI.imoveis.forEach(imovel => {
-		if(bairros.indexOf(imovel.bairro) === -1){
+		if (bairros.indexOf(imovel.bairro) === -1) {
 			bairros.push(imovel.bairro);
-			
+
 			let option = $(`<option value="${imovel.bairro}">${imovel.bairro}</option>`);
 			bairrosSelect.append(option);
 		}
@@ -94,7 +98,7 @@ function popularSelect() {
 }
 
 function popularImoveis() {
-	
+
 	let tbody = imoveis.find("tbody");
 	tbody.html('');
 
@@ -107,8 +111,8 @@ function popularImoveis() {
 
 			let value = '-';
 
-			if(imovel[key] !== undefined && imovel[key] !== null){
-				if(key === 'proprietarioAntigo' || key === 'proprietarioNovo'){
+			if (imovel[key] !== undefined && imovel[key] !== null) {
+				if (key === 'proprietarioAntigo' || key === 'proprietarioNovo') {
 					value = proprietarioDBI.buscaProprietarioPorId(imovel[key]).nome;
 				} else {
 					value = imovel[key];
@@ -122,11 +126,11 @@ function popularImoveis() {
 		tbody.append(tr);
 	});
 
-	
+
 
 }
 function popularProprietarios() {
-    let listaProprietarios = proprietarioDBI.proprietarios;
+	let listaProprietarios = proprietarioDBI.proprietarios;
 	let tbody = proprietarios.children("tbody");
 	tbody.html('');
 
