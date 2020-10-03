@@ -19,7 +19,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 8510000000
+              "duration": 7945000000
             }
           },
           {
@@ -32,7 +32,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 437000000
+              "duration": 210000000
             }
           }
         ],
@@ -67,7 +67,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 363000000
+              "duration": 151000000
             }
           },
           {
@@ -80,7 +80,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 173000000
+              "duration": 81000000
             }
           },
           {
@@ -93,7 +93,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 52000000
+              "duration": 35000000
             }
           }
         ],
@@ -128,7 +128,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 363000000
+              "duration": 273000000
             }
           },
           {
@@ -141,7 +141,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 104000000
+              "duration": 87000000
             }
           },
           {
@@ -154,7 +154,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 234000000
+              "duration": 187000000
             }
           }
         ],
@@ -189,7 +189,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 185000000
+              "duration": 112000000
             }
           },
           {
@@ -202,7 +202,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 52000000
+              "duration": 32000000
             }
           }
         ],
