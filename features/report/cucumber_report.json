@@ -1,0 +1,220 @@
+[
+  {
+    "description": "    Tendo o formulário sido corretamente preenchido, quando for enviado então os dados do novo imóvel cadastrado devem aparecer na tabela",
+    "elements": [
+      {
+        "description": "",
+        "id": "adicionar-novo-imóvel;usuário-preenche-o-formulário-corretamente,-o-envia,-e-o-imóvel-é-exibido-na-tabela",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Usuário preenche o formulário corretamente, o envia, e o imóvel é exibido na tabela",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 4,
+            "name": "Usuário enviar formulário de adicionar imóvel",
+            "match": {
+              "location": "features\\steps.js:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8510000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 5,
+            "name": "A lista de imóveis deve exibir o imóvel recém adicionado",
+            "match": {
+              "location": "features\\steps.js:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 437000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "adicionar-novo-imóvel",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Adicionar novo imóvel",
+    "tags": [],
+    "uri": "features\\adicionar_imovel.feature"
+  },
+  {
+    "description": "    O usuário pode clicar numa aba para alternar a visualização entre a lista de imóveis e de proprietários",
+    "elements": [
+      {
+        "description": "",
+        "id": "alternar-visualização-entre-imóveis-e-proprietários;usuário-clica-na-aba-de-proprietários,-então-a-lista-de-proprietários-é-exibida",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Usuário clica na aba de proprietários, então a lista de proprietários é exibida",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "A lista de imóveis está sendo exibida",
+            "match": {
+              "location": "features\\steps.js:92"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 363000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "Usuário clicar na aba de proprietários",
+            "match": {
+              "location": "features\\steps.js:100"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 173000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "A lista de proprietários deve ser exibida",
+            "match": {
+              "location": "features\\steps.js:104"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 52000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "alternar-visualização-entre-imóveis-e-proprietários",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Alternar visualização entre imóveis e proprietários",
+    "tags": [],
+    "uri": "features\\alternar_visualizacao.feature"
+  },
+  {
+    "description": "    O usuário pode filtrar a lista de imóveis com base em seu bairro e status de venda. ",
+    "elements": [
+      {
+        "description": "",
+        "id": "filtrar-imóveis;o-usuário-seleciona-um-bairro-e-envia-o-formulário-de-filtro",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "O usuário seleciona um bairro e envia o formulário de filtro",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "Um bairro selecionado no filtro",
+            "match": {
+              "location": "features\\steps.js:110"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 363000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "Usuário enviar formulário de filtragem",
+            "match": {
+              "location": "features\\steps.js:118"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 104000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "A lista de imóveis é atualizada segundo o filtro selecionado",
+            "match": {
+              "location": "features\\steps.js:122"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 234000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "filtrar-imóveis",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Filtrar imóveis",
+    "tags": [],
+    "uri": "features\\filtrar_imoveis.feature"
+  },
+  {
+    "description": "    Ao abrir o site, uma lista com todos os imóveis registrados no sistema e seus respectivos atributos deve ser exibida para o usuário em uma tabela.",
+    "elements": [
+      {
+        "description": "",
+        "id": "visualizar-lista-de-imóveis;usuário-acessa-o-site-e-a-lista-de-imóveis-é-mostrada",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Usuário acessa o site e a lista de imóveis é mostrada",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 4,
+            "name": "Usuário acessar o site",
+            "match": {
+              "location": "features\\steps.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 185000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 5,
+            "name": "A lista de imóveis deve ser exibida com 10 itens",
+            "match": {
+              "location": "features\\steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 52000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "visualizar-lista-de-imóveis",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Visualizar lista de imóveis",
+    "tags": [],
+    "uri": "features\\visualizar_imoveis.feature"
+  }
+]

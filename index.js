@@ -1,6 +1,7 @@
 import {imovelDBI, proprietarioDBI} from './dbinit.js';
 import Proprietario from './classes/Proprietario.js';
 import Imovel from './classes/Imovel.js';
+import Filter from './classes/Filter.js';
 
 let form = $('#add-form');
 let filterForm = $('#filter-form');
@@ -99,7 +100,7 @@ function popularSelect() {
 		if (bairros.indexOf(imovel.bairro) === -1) {
 			bairros.push(imovel.bairro);
 
-			let option = $(`<option value="${imovel.bairro}">${imovel.bairro}</option>`);
+			let option = $(`<option id="option-${imovel.bairro}" value="${imovel.bairro}">${imovel.bairro}</option>`);
 			bairrosSelect.append(option);
 		}
 	});

@@ -12,3 +12,5 @@ class Filter {
         return this.data.filter(imovel => vendido === (imovel.proprietarioNovo != undefined));
     }
 }
+
+export default Filter;
